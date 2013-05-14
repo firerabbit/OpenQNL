@@ -15,8 +15,8 @@ OpenQNL queries or commands may be expressed vocally or in written form, and are
 ACTIVATE Inner HelpDesk
 RUN SearchWithin(re-install)
 UNPACK OpenQNL
-ReturnResults as unfolding inner knowledge
-ReturnRate gradually, daily as moments of insight & memorable dreams
+ReturnResults as unfolding inner Knowledge
+ReturnRate gradually, daily as Moments of insight & memorable Dreams
 ```
 
 # Legacy Usage (Pre- OpenQNL, deprecated)
