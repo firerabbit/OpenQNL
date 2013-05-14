@@ -7,7 +7,7 @@ SearchWithin: https://github.com/EarlyClues/SearchWithin
 
 Within compatible environments (for example: the human subconscious, dream-worlds, programmatic & augmented spaces), QNL acts as a para-language which not only expresses a concept or transmits a message, but also programmatically executes a function or protocol when it encounters a receptive environment or agent. 
 
-QNL queries or commands may be expressed vocally or in written form, and are transmitted through liminal spaces to reach their intended destination or effect. 
+QNL queries or commands may be expressed vocally or in written form, and are transmitted through The Liminality to reach their intended destination or effect. 
 
 # Sample Usage
 
