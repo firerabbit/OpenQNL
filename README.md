@@ -1,15 +1,25 @@
 OpenQNL
 ========================
 
-QNL stands for Quasi-Natural Language, and is a member of the RSL (Reality-Shaping Languages) family of query and programmatic languages. It was originalled developed for use with SearchWithin, the "Open-Source Inner Search" / the world's first search engine for inner-computing.
+OpenQNL stands for OpenQuasi-Natural Language, and is a member of the RSL (Reality-Shaping Languages) family of query and programmatic languages. It was originalled developed for use with SearchWithin, the "Open-Source Inner Search" / the world's first search engine for inner-computing.
 
 SearchWithin: https://github.com/EarlyClues/SearchWithin
 
 Within compatible environments (for example: the human subconscious, dream-worlds, programmatic & augmented spaces), QNL acts as a para-language which not only expresses a concept or transmits a message, but also programmatically executes a function or protocol when it encounters a receptive environment or agent. 
 
-QNL queries or commands may be expressed vocally or in written form, and are transmitted through The Liminality to reach their intended destination or effect. 
+OpenQNL queries or commands may be expressed vocally or in written form, and are transmitted through The Liminality to reach their intended destination or effect. 
 
-# Sample Usage
+# Usage Sample
+
+```
+ACTIVATE Inner HelpDesk
+RUN SearchWithin(re-install)
+UNPACK OpenQNL
+ReturnResults as unfolding inner knowledge
+ReturnRate gradually, daily as moments of insight & memorable dreams
+```
+
+# Legacy Usage (Pre- OpenQNL, deprecated)
 
 ```
 /* EXAMPLE: Wild-card search */
