@@ -1,4 +1,4 @@
-QNL-QuasiNaturalLanguage
+OpenQNL (formerly: QNL-QuasiNaturalLanguage)
 ========================
 
 QNL stands for Quasi-Natural Language, and is a member of the RSL (Reality-Shaping Languages) family of query and programmatic languages. It was originalled developed for use with SearchWithin, the "Open-Source Inner Search" / the world's first search engine for inner-computing.
