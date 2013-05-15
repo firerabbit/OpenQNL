@@ -1,0 +1,24 @@
+/**
+  Attempt at squashing a severe spiritual warfare attack against our website. 
+  See: http://www.dreamhoststatus.com/2013/05/15/networking-issues-affecting-us-west-data-center-los-angeles-ca-2/comment-page-2/#comment-281608
+*/
+
+function resurrectWebsite() {
+  if website.deadInTheWater? {
+    website.revive!;
+  }
+
+  //log
+  if website.canWalkOnWater? {
+    sendMiracleEmailReport(“staff@earlyclues.com”);
+  }
+}
+
+function addDefensiveShieldsForSpiritualWarfare() {
+  while (website.down?) {
+    printf “By the Power Of The One Most Magnificent I Command Thee To End These Attacks!”
+  }
+}
+
+addDefensiveShieldsForSpiritualWarfare();
+resurrectWebsite();
