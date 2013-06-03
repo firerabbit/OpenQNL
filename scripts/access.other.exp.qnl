@@ -10,6 +10,6 @@
       if requisite.memory=1
       then assign.value 1(requisite.memory)
       else goto line 7;
-  print 1;
+  print 1(in.dream);
     
     
