@@ -1,0 +1,15 @@
+/**
+  Script designed for accessing stored experiences from past and future lives, as well as memories stored in your genetic programming. Based on the premise that time is amorphous and incarnation is not linear or cyclical.
+*/
+  open On.Self
+  run (search.within)
+  define (requisite.memory);
+  scan space.time
+    include(past,DNA,present,future);
+    compare (requisite.memory)
+      if requisite.memory=1
+      then assign.value 1(requisite.memory)
+      else goto line 7;
+  print 1;
+    
+    
