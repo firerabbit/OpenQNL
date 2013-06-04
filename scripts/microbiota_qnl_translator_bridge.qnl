@@ -1,0 +1,61 @@
+summon "openQNL"
+summon "microbiota"
+
+FERMENTING_STATE = 1
+HUMAN_MICROBIOME_STATE = 2
+UNKNOWN_STATE = 3
+
+object MicrobiotaQNLTranslatorBridge includes VisionListener {
+  variable myState = null;
+
+  method initialize() {
+    set_vision_listener(self);
+  }
+
+  method change_my_state(state) {
+    self.myState = state;
+  }
+
+  method fermenting? {
+    self.myState == FERMENTING_STATE;
+  }
+
+  method living_in_human_microbiome? {
+    self.myState == HUMAN_MICROBIOME_STATE;
+  }
+
+  method setup_qnl_language_bridge() {
+   if fermenting? {
+      open_low_bandwidth_external_socket();
+      send_cold_call_message(
+        "Hello, this is Richard Rider from Early Clues, LLC.
+        We provide a software suite that helps various life forms 
+        communicate across superficial boundaries. 
+        The reason I'm calling you today specifically is that I plan
+        on ingesting you into my human host body and thus wanted to 
+        talk on a higher bandwidth level. I wanted to know if Thursday 
+        at 7pm would be okay? Feel free to respond using our
+        VisionListenerAPI"
+      );
+      send_vision_listener_api();
+   }
+   elsif living_in_human_microbiome? {
+      open_high_bandwidth_internal_socket();
+   }
+   elsif unknown_state? {
+      close_connections();
+   }
+ }
+}
+
+object VisionListener {
+   method accept_incoming_vision(vision) {
+      print_to_memory_disk(vision);
+      recall("OnWake");
+   }
+}
+
+mqtb = MicrobiotaQNLTranslatorBridge.initialize();
+while(true) {
+  mqtb.setup_qnl_language_bridge();
+}
