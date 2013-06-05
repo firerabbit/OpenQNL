@@ -1,11 +1,10 @@
 summon "openQNL"
 summon "microbiota"
 
-FERMENTING_STATE = 1
-HUMAN_MICROBIOME_STATE = 2
-UNKNOWN_STATE = 3
-
 object MicrobiotaQNLTranslatorBridge includes VisionListener {
+  FERMENTING_STATE = 1
+  HUMAN_MICROBIOME_STATE = 2
+  UNKNOWN_STATE = 3
   variable myState = null;
 
   method initialize() {
