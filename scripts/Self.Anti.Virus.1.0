@@ -1,0 +1,19 @@
+Open(OpenQNL.module);
+Access(Liminal.Vault[shared]);
+Load(Viral.Morphology)
+  Assign.Value=V
+    Compare(Viral.Morphology):(Internal.Biological.Function)
+If V=0 Then display results (in.dream);
+Else Then Identify.Virion
+  Address (to.Virion) {
+  "Host body respectfully asks you discontinue operation."
+  }
+    await Virion.response;
+  If Virion.response=1 Then
+    print (sweaty.sheets);
+  If Virion.response=0 Then 
+    Address (to.Virion) {
+  "In the name of the White Wolf, the White Wolf, the White Wolf, I banish you from the body of " print(operator.name)".       Leave the body of " print(operator.name) "now and henceforth, in the name of the Lord Jesus Christ, and the Lord Asclepius. Amen, Amen, Amen.";
+
+
+  
