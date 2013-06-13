@@ -1,0 +1,10 @@
+{
+Run(OpenQNL.Module);
+Scan(Artefact.Under.Hand);
+Open(Liminal.Vault);
+  Scan (Liminal.Vault):(For.All.Localized.Intent[symbols.AND/OR.energies])
+  Compile(For.All.Localized.Intent[symbols.AND/OR.energies])
+    Assign.Value(X);
+Transfer(X).To(Artefact);
+}
+  
