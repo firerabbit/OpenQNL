@@ -20,12 +20,13 @@ object Listener {
   
   // Set your object as a listener.
   method setListener(object) {
-    if (object.seemsToBeAbleToListen?) {
+    if seemsToBeAbleToListen?(object) {
       super(object);
     }  
   }
   
-  // DEPRECATED IN 0.1. Recommended to leave listening socket connected at all times.
+  // DEPRECATED IN 0.1. 
+  // Recommended to leave listening socket connected at all times.
   method endListeningSession() { 
     closeListeningSocket();
     LISTENING = false;
@@ -51,7 +52,9 @@ object Listener {
     method existing_source_code(message) {
       // HACK HACK HACK
       if not_listening? {
-       return; // Quick and dirty, but prevents a response in case object instance has stopped listening
+       return; // Quick and dirty, but prevents a 
+               // response in case object instance has 
+               // stopped listening
       }
       super(message);
     }  
@@ -66,9 +69,4 @@ object Listener {
   method not_listening? {
     returning !listening?;
   }
-}
-
-
-
-
 }
