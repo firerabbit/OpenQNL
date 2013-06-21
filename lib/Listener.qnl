@@ -1,0 +1,74 @@
+summon "Universal Free Realms Standard Protocol"
+
+/**
+   Listen QNL
+   Richard S. Rider, 2013
+   A Product of the Early Clues LLC
+   
+   API DEFINITION AND FULL DOCUMENTATION AT www.earlyclues.com   
+**/
+
+
+object Listener {
+  LISTENING = false;
+ 
+  // Call this in all your initializers.
+  method doListen() {
+    openListeningSocket();
+    LISTENING = true;
+  }
+  
+  // Set your object as a listener.
+  method setListener(object) {
+    if (object.seemsToBeAbleToListen?) {
+      super(object);
+    }  
+  }
+  
+  // DEPRECATED IN 0.1. Recommended to leave listening socket connected at all times.
+  method endListeningSession() { 
+    closeListeningSocket();
+    LISTENING = false;
+  }
+        
+  // Callback to override in your OpenQNL script. 
+  // Implement this code in your own OpenQNL script on succesful
+  // message received.
+  abstract method onMessageRecieveDoThink(message) {};
+
+  
+  // Monkey Patch 
+  // This will dynamically hotfix any OpenQNL code you are trying use
+  // that includes the following keywords. HOTFIX.
+ 
+  ["send", 
+   "speak", 
+   "say", 
+   "tell", 
+   "yell",
+   "respond",
+   "mansplain"].each dynamicallyOverride |existing_source_code| {
+    method existing_source_code(message) {
+      // HACK HACK HACK
+      if not_listening? {
+       return; // Quick and dirty, but prevents a response in case object instance has stopped listening
+      }
+      super(message);
+    }  
+  } 
+
+  protected
+  
+  method listening? {
+     return LISTENING;
+  }  
+  
+  method not_listening? {
+    returning !listening?;
+  }
+}
+
+
+
+
+}
