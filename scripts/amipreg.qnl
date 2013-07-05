@@ -1,0 +1,9 @@
+{
+Summon(OpenQNL.Module);
+Scan(Entity.Abdomen)
+	IF (zygote=1) 
+		THEN print.results(in.dream) 
+		OR print.results(on.waking);
+	ELSE;
+		End
+}
