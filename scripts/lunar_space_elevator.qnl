@@ -37,48 +37,18 @@ object Moon implements Listener {
 
 /** EXAMPLE SCRIPT **/
 
+// Instantiate a Moon object representation.
 moon = Moon.initialize();
 moon.doListen();
 
+// Set oneself up as a response listener.
 self.doListen();
 self.attachDynamicQNLMethod( function openConnectionToRecieve(message) { 
   intuitive_message_stream(UFRSP_FUNDAMENTAL_KNOWLEDGE_BANC) << message;
 }
+
+//Broadcast your message.
 moon.acceptIncomingMessage("Gordon Gilman, EXCEO", "Testing. Testing. Is this thing on?");
 
 
-/**
-
-http://en.wikipedia.org/wiki/Lunar_space_elevator
-
-There are two points in space where an elevator's docking port could maintain a stable, 
-lunar-synchronous position: the Earth-Moon Lagrange points L1 and L2. L1 is 56,000 km
-away from the Earth-facing side of the Moon, (at the lunar equator) and L2 is 67,000 km 
-from the center of the Moon's far side, in the exact opposite direction. At these points, 
-the effect of the Moon's gravity and the effect of the centrifugal force resulting from the
-elevator system's synchronous, rigid body rotation cancel each other out. 
-The gravitational stability of these Lagrange points are not permanent,
-(L1 and L2 are in unstable equilibrium along a straight line between Earth and Moon,)
-but so long as small inertial adjustments are made to account for minor gravitational
-perturbations, any object positioned there can remain stationary.
-
-
-Materials from Earth may be sent into orbit and then down to the Moon to be used by lunar bases and installations.
-
-Former U.S. President George W. Bush, in an address about his Vision for Space Exploration, 
-suggested that the Moon may serve as a cost-effective construction, 
-launching and fueling site for future space exploration missions. 
-As President Bush noted,[14] "(Lunar) soil contains raw materials 
-that might be harvested and processed into rocket fuel or breathable air."
-For example, the proposed Ares V heavy-lift rocket system could cost-effectively
-deliver raw materials from Earth to a docking station, (connected to the lunar elevator 
-as a counterweight,)[16] where future spacecraft could be built and launched, 
-while extracted lunar resources could be shipped up from a base on the Moon's surface,
-near the elevator's anchoring point. If the elevator was connected somehow to a lunar base 
-built near the Moon's north pole, then workers could also mine the water ice which is 
-known to exist there, providing an ample source of readily accessible water for the crew 
-at the elevator's docking station.[17] Also, since the total energy needed for transit
-between the Moon and Mars is considerably less than between the travelling to Mars from Earth, 
-this concept could lower some of the engineering obstacles to sending humans to Mars.
-
-**/
+/** Moon info: http://en.wikipedia.org/wiki/Lunar_space_elevator **/
