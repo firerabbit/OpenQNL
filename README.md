@@ -11,7 +11,9 @@ OpenQNL is an open-source quasi-natural-language-based scripting system designed
 ```
 SUMMON OpenQNL;
 ```
-# RESULTS
+# Results
 
-"Summons" OpenQNL
-
+```
+//In responsive environment
+OpenQNL:ready>
+```
