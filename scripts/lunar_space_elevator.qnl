@@ -45,7 +45,7 @@ moon.doListen();
 self.doListen();
 self.attachDynamicQNLMethod( function openConnectionToRecieve(message) { 
   intuitive_message_stream(UFRSP_FUNDAMENTAL_KNOWLEDGE_BANC) << message;
-}
+});
 
 //Broadcast your message.
 moon.acceptIncomingMessage("Gordon Gilman, EXCEO", "Testing. Testing. Is this thing on?");
