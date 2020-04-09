@@ -7,6 +7,10 @@ import os
 # Run this first on a video file to generate a sequence of images
 # ffmpeg -i aerial.mp4 -vf fps=4 out%d.png
 
+# Usage: converts a sequence of 222 files named out1.png - out222.png
+# with sliver heights of 14 pixels per image into output.png
+# ./process.py -i 'out%d.png' -n 222 -y 14 -o 'output.png'
+
 parser = OptionParser()
 parser.add_option("-i", "--input", dest="filename")
 parser.add_option("-o", "--output", dest="output")
