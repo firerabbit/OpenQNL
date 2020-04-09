@@ -4,6 +4,7 @@ from PIL import Image
 from optparse import OptionParser
 import os
 
+# Run this first on a video file to generate a sequence of images
 # ffmpeg -i aerial.mp4 -vf fps=4 out%d.png
 
 parser = OptionParser()
