@@ -5,7 +5,7 @@ from optparse import OptionParser
 import os
 
 # Run this first on a video file to generate a sequence of images
-# ffmpeg -i aerial.mp4 -vf fps=4 out%d.png
+# ffmpeg -i aerial.mp4 -filter:v "crop=3840,50,0,1055" -vf fps=16 tmp/out%d.png
 
 # Usage: converts a sequence of 222 files named out1.png - out222.png
 # with sliver heights of 14 pixels per image into output.png
@@ -33,16 +33,19 @@ i.close()
 
 om = Image.new('RGB', (w, y * num))
 
-for i in xrange(1, num+1):
-  # Crop a 2 pixel sliver
-  im = Image.open(filename % i)
-  # Sliver in the middle of the image
-  top = h / 2 # h - y
-  crop_box = (0, top, w, top + y)
-  paste_box = (0, (i-1)*y, w, (i)*y)
-  print "copying from %s to %s" % (crop_box, paste_box)
-  r = im.crop(crop_box)
-  om.paste(r.rotate(180), paste_box)
-
-om.save(output)
-print 'wrote %s' % output
+try:
+    for i in xrange(1, num+1):
+      # Crop a 2 pixel sliver
+      im = Image.open(filename % i)
+      # Sliver in the middle of the image
+      top = h / 2 # h - y
+      crop_box = (0, top, w, top + y)
+      paste_box = (0, (i-1)*y, w, (i)*y)
+      print "i=%s copying from %s to %s" % (i, crop_box, paste_box)
+      r = im.crop(crop_box)
+      om.paste(r.rotate(180), paste_box)
+except Exception, err:
+    print err
+finally:
+  om.save(output)
+  print 'wrote %s' % output
